@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #dedede;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 90%;
+  max-width: 450px;
+  aspect-ratio: 1/1;
+  background-color: #ffffff;
+  border-radius: 5%;
+  overflow: hidden;
+}
+
+.board-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 3em;
+  transition: background-color 0.2 ease;
+}
+
+.board-item:hover {
+  background-color: rgb(218, 227, 255);
+}
+
+#a1, #b1, #c1,
+#a2, #b2, #c2 {
+  border-right: 5px solid;
+}
+
+#b1, #b2, #b3 {
+  border-top: 5px solid;
+  border-bottom: 5px solid;
+}
